@@ -1,0 +1,42 @@
+.dashboard-cards {
+  display: flex;
+  flex-grow: 1;
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-top: 20px;
+    width: 300px;
+    margin-right: 20px;
+    word-break: break-all;
+
+    &-id {
+      background: red;
+    }
+
+    &-uuid {
+      background: aquamarine;
+    }
+
+    &-button {
+      height: 20px;
+      width: 100%;
+    }
+
+    &-name {
+      background: yellow;
+    }
+
+    &-description {
+      background: green;
+    }
+  }
+
+  &__button {
+    height: 40px;
+    margin-top: 40px;
+  }
+}

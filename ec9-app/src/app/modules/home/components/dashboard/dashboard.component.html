@@ -1,0 +1,33 @@
+<p>dashboard works!</p>
+<div class="dashboard-cards__items">
+  <div *ngFor="let card of _cards$ | async"
+       class="dashboard-cards__item">
+    <div class="dashboard-cards__item-id">
+      Card ID: {{card.id}}
+    </div>
+    <div class="dashboard-cards__item-uuid">
+      Card UUID: {{card.uuid}}
+    </div>
+    <div class="dashboard-cards__item-name">
+      Card Name: {{card.name}}
+    </div>
+    <div class="dashboard-cards__item-description">
+      Card Description: {{card.description}}
+    </div>
+
+    <button class="dashboard-cards__item-button navigation__button no-outline"
+            (click)="_onUpdateDescription(card.id)">
+      Click Me to update with random description
+    </button>
+
+    <button class="dashboard-cards__item-button navigation__button no-outline"
+            (click)="_onRemoveCard(card.id)">
+      Click Me to remove card
+    </button>
+  </div>
+</div>
+
+<button class="dashboard-cards__button navigation__button no-outline"
+        (click)="_onCreateNew()">
+  Click Me to create random card
+</button>
